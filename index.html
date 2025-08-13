@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dough Proving Manager – Prototype</title>
+    <style>
+      :root {
+        --bg:#0b0c10;
+        --card:#111318;
+        --muted:#9aa1ad;
+        --accent:#e2e8f0;
+        --ok:#16a34a;
+        --warn:#f59e0b;
+        --bad:#ef4444;
+      }
+      *{box-sizing:border-box}
+      body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Ubuntu,Helvetica,Arial,sans-serif;background:var(--bg);color:white}
+      .container{max-width:1100px;margin:0 auto;padding:24px}
+      h1{font-size:28px;margin:0 0 16px}
+      .row{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+      .card{background:var(--card);border-radius:14px;padding:14px;border:1px solid rgba(255,255,255,0.06)}
+      .title{font-weight:700;margin-bottom:6px;display:flex;align-items:center;gap:8px}
+      .big{font-size:28px;font-weight:700}
+      .muted{color:var(--muted);font-size:12px}
+      .grid{display:grid;gap:12px}
+      .grid-2{grid-template-columns:repeat(2,1fr)}
+      .input-row{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;align-items:end}
+      input{width:100%;padding:8px 10px;border-radius:10px;border:1px solid rgba(255,255,255,0.1);background:#0f1218;color:white}
+      button{padding:10px 12px;border-radius:10px;background:#2563eb;color:white;border:none;font-weight:600;cursor:pointer}
+      button:disabled{opacity:0.5;cursor:not-allowed}
+      .pill{display:inline-block;padding:4px 8px;border-radius:999px;font-size:12px}
+      .pill.ready{background:rgba(22,163,74,.15);color:#86efac}
+      .pill.proving{background:rgba(59,130,246,.15);color:#bfdbfe}
+      .pill.old{background:rgba(245,158,11,.15);color:#fde68a}
+      .pill.expired{background:rgba(239,68,68,.15);color:#fecaca}
+      .columns-5{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+      .batch{background:rgba(255,255,255,0.03);padding:10px;border-radius:12px;border:1px dashed rgba(255,255,255,0.08)}
+      .section{margin-top:16px}
+      .spacer{height:8px}
+      .small{font-size:13px}
+      .footer{margin-top:18px;color:var(--muted);font-size:12px}
+      @media (max-width: 900px){
+        .row{grid-template-columns:1fr 1fr}
+        .input-row{grid-template-columns:1fr 1fr}
+        .columns-5{grid-template-columns:1fr 1fr}
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
